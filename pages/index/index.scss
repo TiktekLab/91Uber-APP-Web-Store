@@ -1,0 +1,210 @@
+$time: 0.75s;
+.bodyMain {
+	background: url(@/static/image/bg.png) no-repeat center bottom;
+	background-size: 120%;
+	height: 100vh;
+	overflow: auto;
+	transition: all 1s;
+	&.signUp {
+		// background-size: cover;
+		background-size: 105%;
+		transition: all 1s;
+	}
+	// .pictureBg{
+	// 	position: absolute;
+	// 	left: 0;
+	// 	right: 0;
+	// 	top: 0;
+	// 	bottom: 0;
+	// 	z-index: 0;
+	// 	width: 100vw !important;
+	// 	height: 100vh !important;
+	// }
+	.bg {
+		width: 100vw;
+		height: 100vh;
+		background: rgba(62, 64, 63, 0.4);
+		z-index: 1;
+	}
+	.main {
+		overflow-x: hidden;
+		overflow-y: auto;
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		.logo {
+			width: 113rpx;
+			height: 92rpx;
+			margin: 100rpx auto 300rpx;
+		}
+		.title {
+			flex-wrap: nowrap;
+			padding: 0 250rpx;
+			margin-bottom: 60rpx;
+			margin-left: -320rpx;
+			transition: all $time;
+			&.isLogin {
+				margin-left: 0;
+				transition: all $time;
+				align-items: center
+			}
+			text {
+				font-size: 128rpx;
+				color: rgba(255, 255, 255, 0.3);
+				transition: all $time;
+				white-space: nowrap;
+				font-family: PaytoneOne;
+				&.active {
+					color: rgba(255, 255, 255, 1);
+					transition: all $time;
+				}
+				&:first-child {
+					margin-right: 70rpx;
+				}
+			}
+			.register-but{font-size: 110rpx!important;}
+		}
+		.formBox {
+			padding: 0 80rpx;
+			.form {
+				position: absolute;
+				width: 590rpx;
+				animation: isSignUp $time;
+				animation-iteration-count: 1;
+				animation-fill-mode: forwards;
+				opacity: 0;
+				display: none;
+				&.isSignUp {
+					opacity: 1;
+					display: block;
+					animation: isLogin $time;
+					animation-iteration-count: 1;
+					animation-fill-mode: forwards;
+				}
+				/deep/ .u-form-item {
+					padding: 10rpx 0;
+					&:nth-child(2) {
+						margin-top: 20rpx;
+					}
+					&::after {
+						border-bottom: 6rpx solid $pink;
+					}
+					&.email {
+						.u-form-item--right{
+							padding-right: 0;
+							.u-form-item--right__content__slot {
+								flex-direction: column;
+								align-items: flex-start;
+								.inputLable {
+									margin-bottom: 10rpx;
+									.lable {
+										color: #fff;
+										font-size: 30rpx;
+										font-family: PoppinsBold;
+										&.tips {
+											font-size: 26rpx;
+											margin-left: 20rpx;
+										}
+									}
+								}
+							}
+						}
+						
+					}
+					.u-form-item--left__content__label {
+						color: #fff;
+						font-size: 30rpx;
+						font-family: PoppinsBold;
+					}
+					.u-form-item--right {
+						border-radius: 10rpx;
+						padding-right: 20rpx;
+
+						.getCode {
+							font-size: 26rpx;
+						}
+					}
+				}
+				.savePwd {
+					padding: 40rpx 0;
+					.checkbox {
+						/deep/ .u-checkbox__label {
+							color: #fff;
+						}
+					}
+					.Forget {
+						font-size: 30rpx;
+						color: #fff;
+						z-index: 100;
+					}
+				}
+				.signUpBtn {
+					margin: 60rpx auto 40rpx;
+				}
+				.footer {
+					margin: 30rpx 0;
+					.circle {
+						width: 30rpx;
+						height: 30rpx;
+						flex: 0 0 30rpx;
+						margin-right: 15rpx;
+						border: 2rpx solid #fff;
+						border-radius: 30rpx;
+						padding: 0 0 10rpx 10rpx;
+					}
+					.circleInfo {
+						font-size: 20rpx;
+						color: #fff;
+						&.savePwdLable {
+							font-size: 30rpx;
+						}
+						&.law {
+							// font-size: 24rpx;
+						}
+					}
+				}
+				.policy {
+					/deep/ .u-checkbox__label {
+						color: #fff;
+						font-size: 20rpx;
+					}
+				}
+			}
+		}
+		.welcome {
+			margin: 30rpx 0 70rpx;
+			color: #fff;
+			font-size: 20rpx;
+			justify-content: center;
+			white-space: nowrap;
+		}
+	}
+}
+
+@keyframes isLogin {
+	0% {
+		opacity: 0;
+		display: none;
+	}
+	99% {
+		opacity: 1;
+	}
+	100% {
+		display: block;
+	}
+}
+
+@keyframes isSignUp {
+	0% {
+		opacity: 1;
+		display: block;
+	}
+	99% {
+		opacity: 0;
+	}
+	100% {
+		display: none;
+	}
+}

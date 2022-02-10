@@ -1,0 +1,96 @@
+.bodyMain {
+	overflow: auto;
+	height: 100vh;
+	background-color: #f9f9f9;
+	.staffDetails {
+		height: 150rpx;
+		background-color: #fff;
+		margin: 20rpx 0;
+		.info {
+			flex: 1;
+			margin-left: 20rpx;
+			.left {
+				height: 100rpx;
+				justify-content: space-around;
+				align-items: flex-start;
+				flex-direction: column;
+				.name {
+					font-family: PingFangSCBold;
+				}
+				.rate {
+					margin-left: 20rpx;
+					.icon {
+						color: #ffd60a;
+						font-size: 30rpx;
+						margin-right: 10rpx;
+					}
+					.count {
+						font-size: 24rpx;
+					}
+				}
+			}
+		}
+	}
+	.evaluate {
+		padding-top: 30rpx;
+		padding-bottom: 80rpx;
+		background-color: #fff;
+		margin-bottom: 200rpx;
+		.pageTitle {
+			// 页面标题
+			font-size: 30rpx;
+			color: #000;
+			font-family: PingFangSCBold;
+		}
+		.evaluateList {
+			margin-top: 30rpx;
+			.itemContent {
+				flex-wrap: wrap;
+				margin-top: 15rpx;
+				.tag {
+					padding: 15rpx 10rpx;
+					text {
+						text-overflow: ellipsis;
+						white-space: nowrap;
+						height: 60rpx;
+						min-width: 140rpx;
+						padding: 10rpx 30rpx;
+						max-width: calc(100vw - 140rpx);
+						transition: all 0.15s;
+						font-size: 30rpx;
+						font-family: PingFangSCMedium;
+						background-color: #f9f9f9;
+					}
+					&.active {
+						text {
+							background-color: $pink;
+							color: $white;
+							transition: all 0.15s;
+						}
+					}
+				}
+			}
+			.textareaBox{
+				border: 2rpx solid #eee;
+				height: auto;
+				margin-top: 15rpx;
+				padding: 30rpx;
+			}
+		}
+	}
+	.footerBtn {
+		// 底部按钮
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 30rpx 30rpx 50rpx;
+		background-color: #fff;
+		border-top: 2rpx solid #eee;
+		.btn {
+			height: 88rpx;
+			width: 300rpx;
+			margin: 0;
+		}
+	}
+}

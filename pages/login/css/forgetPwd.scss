@@ -1,0 +1,90 @@
+.bodyMain {
+	background: url(@/static/image/bg.png) no-repeat center bottom;
+	background-size: 105%;
+	// padding: 0 50rpx;
+	overflow: auto;
+	height: 100vh;
+	/deep/.u-title {
+		font-family: PingFangSCMedium !important;
+		font-weight: 500 !important;
+	}
+	.bg {
+		width: 100vw;
+		height: 100vh;
+		background: rgba(62, 64, 63, 0.4);
+		z-index: 1;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+	.main {
+		
+		position: relative;
+		z-index: 10;
+	}
+	.registerForm {
+		border-radius: 20rpx;
+		padding: 30rpx 30rpx 60rpx 30rpx;
+		margin-bottom: 50rpx;
+		margin-top: 30rpx;
+		.form {
+			margin: 0 auto;
+			width: 590rpx;
+			/deep/ .u-form-item {
+				padding: 10rpx 0;
+				&:nth-child(2) {
+					margin-top: 20rpx;
+				}
+				&::after {
+					border-bottom: 6rpx solid $pink;
+				}
+				.u-form-item--left__content__label {
+					color: #fff;
+					font-size: 30rpx;
+					font-family: PoppinsBold;
+				}
+				.u-form-item--right {
+					border-radius: 10rpx;
+					padding-right: 20rpx;
+					.u-input__input {
+						font-size: 30rpx;
+						font-family: PingFangSCBold;
+						color: #fff;
+					}
+					.getCode {
+						font-size: 24rpx;
+					}
+					.u-icon__icon {
+						color: #fff !important;
+					}
+				}
+				.u-form-item__message {
+					color: $pink;
+				}
+			}
+		}
+	}
+}
+.PreciseSearch {
+	margin: 0 auto;
+	width: 590rpx;
+	position: fixed;
+	bottom: constant(safe-area-inset-bottom);
+	bottom: env(safe-area-inset-bottom);
+	left: 0;
+	right: 0;
+	padding-top: 30rpx;
+	&.isAndroid {
+		bottom: 50rpx;
+	}
+	.searchBtn {
+		height: 100rpx;
+	}
+	.welcome {
+		white-space: nowrap;
+		color: #fff;
+		margin-top: 100rpx;
+	}
+}

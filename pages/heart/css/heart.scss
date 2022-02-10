@@ -1,0 +1,170 @@
+.bodyMain {
+	background-color: #f9f9f9;
+	.padding50 {
+		padding-left: 50rpx;
+		padding-right: 50rpx;
+	}
+	.stat {
+		background-color: #f9f9f9;
+		position: fixed;
+		z-index: 1000;
+		height: var(--status-bar-height); // --status-bar-height系统状态栏高度
+		width: 100%;
+		top: 0;
+		left: 0;
+	}
+	.welcome {
+		padding-top: calc(constant(safe-area-inset-top) + 30rpx);
+		padding-top: calc(env(safe-area-inset-top) + 30rpx);
+		padding-top: calc(var(--status-bar-height) + 30rpx);
+		padding-bottom: 50rpx;
+		.left {
+			flex-direction: column;
+			height: 130rpx;
+			align-items: flex-start;
+			text {
+				font-size: 30rpx;
+				color: rgba(33, 33, 73, 0.6);
+				&.hello {
+					-webkit-line-clamp: 1;
+					margin-right: 30rpx;
+					overflow: hidden;
+					display: -webkit-box;
+					-webkit-box-orient: vertical;
+					font-size: 42rpx;
+					color: #000;
+					// font-family: PaytoneOne;
+					font-family: PingFangSCBold;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	.pageTitle {
+		font-size: 30rpx;
+		margin-bottom: 20rpx;
+	}
+	.staffList {
+		padding-bottom: 480rpx;
+		&.isAndroid {
+			padding-bottom: 440rpx;
+		}
+		.staffItem {
+			position: relative;
+			padding: 30rpx;
+			height: 230rpx;
+			background-color: #fff;
+			border-radius: 20rpx;
+			overflow: hidden;
+			margin-bottom: 40rpx;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			.staffInfo {
+				// 员工信息
+				margin-bottom: 30rpx;
+				.left {
+					align-items: flex-end;
+					.avatar {
+						margin-right: 20rpx;
+						/deep/ .u-image__image {
+							border-radius: 10rpx !important;
+							overflow: hidden !important;
+						}
+					}
+					.staffName {
+						font-size: 30rpx;
+						margin-bottom: 10rpx;
+					}
+				}
+				.right {
+					align-items: flex-end;
+					height: 80rpx;
+					.staffStatus {
+						color: $pink;
+						font-family: PingFangSCBold;
+						margin-bottom: 10rpx;
+						&.noWork {
+							color: #0a2584;
+						}
+						&.Offline {
+							color: #6b7582;
+						}
+					}
+					.staffIcon {
+						font-size: 15rpx;
+						color: $pink;
+						margin-left: 15rpx;
+						margin-bottom: 20rpx !important;
+					}
+					
+				}
+			}
+			.nextTime {
+				// 下次预约时间
+				font-size: 20rpx;
+				color: #686868;
+			}
+			&.Disable{
+				.blacklisted{
+					flex-direction: column;
+					background-color: rgba(0, 0, 0, 0.4);
+					position: absolute;
+					border-radius: 20rpx;
+					overflow: hidden;
+					left: 0;
+					right: 0;
+					top: 0;
+					bottom: 0;
+					.pink{
+						font-size: 26rpx;
+						height: 72rpx;
+						margin-bottom: 30rpx;
+					}
+					.disableInfo{
+						// font-size: 24rpx;
+						color: #fff;
+					}
+				}
+				
+			}
+		}
+		
+	}
+	.addStaffBox {
+		// 新增员工
+		position: fixed;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		z-index: 200;
+		// background-color: #fff;
+		// padding-bottom: 210rpx;
+		background-color: #f9f9f9;
+		border-bottom: 210rpx solid #f9f9f9;
+		&.bottom {
+			bottom: 170rpx;
+		}
+		.addStaff {
+			background-color: #fff;
+			border-radius: 20rpx;
+			overflow: hidden;
+			height: 230rpx;
+			margin: 30rpx 50rpx 0;
+			padding: 50rpx 0;
+			flex-direction: column;
+			.plus {
+				margin-top: 8rpx;
+				.text {
+					font-family: PingFangSCBold;
+					margin-left: 10rpx;
+				}
+			}
+		}
+	}
+}
+/deep/ .u-action-sheet-item {
+	text {
+		font-size: 30rpx !important;
+	}
+}

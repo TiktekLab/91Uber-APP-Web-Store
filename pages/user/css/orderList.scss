@@ -1,0 +1,77 @@
+// tab菜单
+.tabBox {
+	background-color: $white;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 100;
+	.tab {
+		width: 50%;
+		padding: 20rpx;
+		margin-bottom: 2rpx;
+		text{
+			border-bottom: 2rpx solid transparent;
+			transition: all 0.3s;
+			color: #000;
+		}
+		&.active {
+			text{
+				transition: all 0.3s;
+				color: $pink;
+				border-bottom: 2rpx solid $pink;
+			}
+		}
+	}
+}
+// 订单列表
+.swipeList{
+	margin: 30rpx 0;
+	&:last-child{
+		margin-bottom: 0;
+	}
+}
+.main{
+	padding-top: 90rpx;
+	.orderList{
+		background-color: $white;
+		padding: 20rpx;
+		.top{
+			margin-bottom: 20rpx;
+			text{
+				font-size: 20rpx;
+				color: #A2A2A2;
+				&.name{
+					color: $font-color-gray;
+				}
+				&.success{
+					color: #000;
+					white-space: nowrap;
+					margin-left: 10rpx;
+				}
+			}
+		}
+		.footer{
+			justify-content: space-between;
+			align-items: flex-end;
+			.flex{
+				flex-direction: column;
+				
+			}
+			text{
+				font-size: $font-size-base;
+				color: $font-color-gray;
+				&.iconfont{
+					font-size: 28rpx;
+					&.start{
+						color: $success;
+					}
+					&.end{
+						color: $font-color-pink;
+					}
+				}
+			
+			}
+		}
+	}
+}

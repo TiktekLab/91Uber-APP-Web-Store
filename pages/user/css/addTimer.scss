@@ -1,0 +1,42 @@
+.navBar {
+	/deep/.save {
+		margin-right: 40rpx;
+	}
+}
+
+.main{
+	padding: 50rpx;
+	.startTime{
+		padding-bottom: 35rpx;
+		.title {
+			color: $font-color-pink;
+			font-size: 28rpx;
+			margin: 20rpx 0;
+		}
+	.contentBox {
+		margin: 20rpx 0;
+		padding-bottom: 10rpx;
+		font-size: $font-size-lg;
+		font-family: 'PingFangSCMedium';
+		border-bottom: 2rpx solid #eaeaea;
+		font-size: 28rpx;
+		overflow: auto;
+		text {
+			white-space: nowrap;
+			margin-right: 30rpx;
+			&:last-child {
+				margin-right: 0;
+			}
+			&.content{
+				height: 40rpx;
+			}
+		}
+	}
+	}
+}
+.btnBox{	
+	width: 100%;
+	padding: 50rpx;
+	position: fixed;
+	bottom: 20rpx;
+}

@@ -1,0 +1,42 @@
+.tabs {
+	padding: 0 80rpx;
+}
+
+.swiperBox {
+	height: calc(100% - 40px - 48px);
+	.swiper-item {
+		.item {
+			padding: 0 50rpx;
+			.forget {
+				margin: 40rpx 0;
+				font-size: 28rpx;
+				color: $font-color-gray;
+			}
+		}
+		// 隐私政策
+		.policy {
+			font-size: $font-size-sm;
+			color: $font-color-gray;
+			text-align: center;
+			line-height: 1.5;
+			margin: 40rpx 0;
+		}
+		
+	}
+}
+.footer {
+	.textBox {
+		text {
+			display: inline-block;
+			margin: 30rpx 0;
+			font-size: $font-size-sm;
+			color: $font-color-gray;
+			line-height: 1.5;
+			font-family: 'PingFangSCRegular';
+
+			&.center {
+				margin: 0 30rpx;
+			}
+		}
+	}
+}

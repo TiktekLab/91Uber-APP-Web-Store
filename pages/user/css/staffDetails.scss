@@ -1,0 +1,100 @@
+// 用户信息
+.userInfo {
+	.bodyBG {
+		height: 140rpx;
+	}
+	.user {
+		margin-top: -110rpx;
+		.avatar {
+			width: 160rpx;
+			height: 160rpx;
+			flex: 0 0 160rpx;
+			margin: 0 auto 10rpx;
+		}
+		.info {
+			flex-direction: column;
+			border-bottom: 2rpx solid #eee;
+			padding-bottom: 30rpx;
+			text {
+				font-size: 26rpx;
+				color: #000;
+				-webkit-line-clamp: 1;
+				overflow: hidden;
+				display: -webkit-box;
+				-webkit-box-orient: vertical;
+				&.num {
+					height: 30rpx;
+				}
+				&.name {
+					font-size: 48rpx;
+					margin: 10rpx 0;
+				}
+				&.icon {
+					color: #ffc107;
+					margin-left: 10rpx;
+				}
+			}
+		}
+	}
+}
+// 评价
+.evaluateList {
+	.title {
+		margin: 20rpx 0;
+		.stars {
+			color: #ffd60a;
+			font-size: 36rpx;
+			margin-right: 10rpx;
+		}
+		.text {
+			font-size: 36rpx;
+			color: #000;
+			font-family: PingFangSCBold;
+		}
+	}
+	.evaluateItem {
+		flex-wrap: wrap;
+
+		.item {
+			height: 64rpx;
+			line-height: 64rpx;
+			border-radius: 64rpx;
+			background-color: rgba(255, 54, 162, 0.1);
+			color: $pink;
+			padding: 0 30rpx;
+			font-size: 26rpx;
+			margin: 0 30rpx 30rpx 0;
+			white-space: nowrap;
+		}
+	}
+	.listBox {
+		.listItem {
+			padding: 30rpx 0;
+			border-top: 2rpx solid #eee;
+			.userInfo {
+				margin-bottom: 30rpx;
+				.left {
+					flex: 0 0 82rpx;
+					width: 82rpx;
+					height: 82rpx;
+					border-radius: 50%;
+					overflow: hidden;
+					margin-right: 30rpx;
+				}
+				.right {
+					flex: 1;
+					.name {
+						font-family: PingFangSCBold;
+						font-size: 30rpx;
+						color: #000;
+					}
+					.time {
+						color: #6b7582;
+					}
+				}
+			}
+			.centent {
+			}
+		}
+	}
+}

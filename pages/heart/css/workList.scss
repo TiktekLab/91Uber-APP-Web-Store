@@ -1,0 +1,184 @@
+.fixedTop {
+	// 个人信息和tabs
+	position: fixed;
+	right: 0;
+	left: 0;
+	z-index: 100;
+	top: calc(constant(safe-area-inset-top) + 44px);
+	top: calc(env(safe-area-inset-top) + 44px);
+	top: calc(var(--status-bar-height) + 44px);
+	.userInfo {
+		padding: 30rpx;
+		border-bottom: 2rpx solid #eee;
+		background-color: #fff;
+
+		.info {
+			flex: 1;
+			margin-left: 20rpx;
+			.left {
+				height: 100rpx;
+				justify-content: space-around;
+				align-items: flex-start;
+				flex-direction: column;
+				.name {
+					font-family: PingFangSCBold;
+				}
+				.rate {
+					margin-left: 20rpx;
+					.icon {
+						color: #ffd60a;
+						font-size: 30rpx;
+						margin-right: 10rpx;
+					}
+					.count {
+						font-size: 24rpx;
+					}
+				}
+			}
+		}
+	}
+}
+
+.timeList {
+	// 排班列表
+	padding-bottom: 30rpx;
+	margin-top: 246rpx;
+	.timeItem {
+		.item {
+			height: 90rpx;
+			line-height: 90rpx;
+			padding: 30rpx;
+			border-bottom: 2rpx solid #eee;
+			text {
+				font-size: 26rpx;
+				color: #000;
+			}
+			&.padding30{
+				padding: 30rpx 60rpx;
+			}
+			&.title {
+				// 标题
+				background-color: #f9f9f9;
+				text {
+					font-size: 30rpx;
+					font-family: PingFangSCBold;
+				}
+			}
+			&.active {
+				// 有预约的状态
+				background: rgba(255, 54, 162, 0.1);
+				border-left: 2rpx solid $pink;
+				border-right: 2rpx solid $pink;
+				text {
+					color: $pink;
+					font-family: PingFangSCBold;
+				}
+			}
+			&.startTime {
+				// 开始时间
+				border-top: 2rpx solid $pink;
+			}
+			&.endTime {
+				// 结束时间
+				border-bottom: 2rpx solid $pink;
+			}
+			&.disable {
+				// 个人时间
+				background-color: #f2f2f2;
+				text {
+					color: #a4a0a0;
+					font-family: PingFangSCMedium;
+				}
+			}
+		}
+	}
+}
+.plusBtn {
+	//添加排班按钮
+	position: fixed;
+	right: 50rpx;
+	bottom: 200rpx;
+	z-index: 10;
+	width: 120rpx;
+	height: 120rpx;
+	box-shadow: 0rpx 8rpx 60rpx rgba(0, 0, 0, 0.1);
+	background-color: $pink;
+	border-radius: 50%;
+}
+// 添加排班弹窗
+.popupBox {
+	width: 540rpx;
+	.popupTitle {
+		flex-direction: column;
+		padding: 30rpx 0;
+		.strong {
+			font-size: 30rpx;
+			font-family: PingFangSCBold;
+		}
+	}
+	.listItem {
+		height: 85rpx;
+		line-height: 85rpx;
+		border-top: 2rpx solid #eee;
+		text {
+			color: #007aff;
+			font-size: 30rpx;
+			&.strong {
+				font-family: PingFangSCBold;
+			}
+		}
+	}
+}
+// 添加时间面板
+.addTimePopup {
+	height: calc(100vh - (constant(safe-area-inset-top) + 44px));
+	height: calc(100vh - (env(safe-area-inset-top) + 44px));
+	height: calc(100vh - (var(--status-bar-height) + 44px));
+	background-color: #fff;
+	.popupTitle {
+		height: 120rpx;
+		background-color: #f7f8f9;
+		.save {
+			color: $pink;
+			margin: 0;
+			background-color: transparent;
+			font-size: 26rpx;
+			font-family: PingFangSCBold;
+		}
+		text {
+			padding: 30rpx;
+			font-family: PingFangSCBold;
+
+			&.cancel {
+				color: #6b7582;
+			}
+			
+		}
+	}
+	.popupBody {
+		height: calc(100vh - (constant(safe-area-inset-top) + 44px + 120rpx));
+		height: calc(100vh - (env(safe-area-inset-top) + 44px + 120rpx));
+		height: calc(100vh - (var(--status-bar-height) + 44px + 120rpx));
+		.timeSlot {
+			.timeItem {
+				height: 130rpx;
+				border-bottom: 2rpx solid #eee;
+				text {
+					font-size: 30rpx;
+				}
+			}
+		}
+		.footerBtn {
+			// 底部按钮
+			padding: 30rpx 30rpx 50rpx;
+			background-color: #fff;
+			.addTimeBtn{
+				background-color: #F9F9F9;
+				height: 130rpx;
+				flex: 1;
+			}
+		
+		}
+		
+	}
+}

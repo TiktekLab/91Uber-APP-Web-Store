@@ -1,0 +1,143 @@
+.bodyMain {
+	background-color: #f9f9f9;
+	height: 100vh;
+	overflow: auto;
+	.avatarBox {
+		margin: 40rpx 50rpx;
+		flex-direction: column;
+		background-color: #fff;
+		border-radius: 20rpx;
+		padding: 30rpx;
+		.title {
+			color: $pink;
+			margin-top: 20rpx;
+		}
+	}
+	.form {
+		background-color: #fff;
+		/deep/ .u-form-item--left {
+			display: none;
+		}
+		.lines{
+			height: 40rpx;
+			background-color: #f9f9f9;
+			border-top: 20rpx solid #fff;
+			box-sizing: content-box;
+		}
+		.formItem {
+			flex: 1;
+			.inputLable {
+				height: 90rpx;
+				.lable {
+					color: $pink;
+					font-size: 30rpx;
+					&.tips {
+						font-size: 26rpx;
+						margin-left: 20rpx;
+					}
+				}
+			}
+			.inputBox {
+				// input输入框
+				padding-left: 30rpx;
+				border: 2rpx solid #eee;
+				height: 90rpx;
+				&.textareaBox {
+					height: auto;
+					padding: 30rpx;
+				}
+				
+				.tips {
+					color: $pink;
+					font-size: 30rpx;
+				}
+				
+				.holder {
+					font-size: 23rpx;	
+					letter-spacing: -2rpx;
+				}
+			}
+			.bustBox {
+				// 胸围选择
+				border: 2rpx solid $pink;
+				max-width: 690rpx;
+				overflow: auto;
+				.bustItem {
+					color: $pink;
+					background-color: #fff;
+					font-size: 30rpx;
+					font-family: PingFangSCBold;
+					transition: all 0.3s;
+					min-width: 140rpx;
+					height: 70rpx;
+					border-right: 2rpx solid $pink;
+					&:last-child {
+						border-right: none;
+					}
+					&.active {
+						color: #fff;
+						transition: all 0.3s;
+						background-color: $pink;
+					}
+				}
+			}
+			.priceBox {
+				// 设置价格
+				background-color: #f9f9f9;
+				.priceItem {
+					height: 80rpx;
+					padding: 20rpx 0;
+					border-bottom: 2rpx solid #eee;
+					.priceInp {
+						background-color: #fff;
+						margin-left: 20rpx;
+						max-width: 200rpx;
+						min-height: 60rpx !important;
+						padding: 0 20rpx;
+					}
+					&:last-child {
+						border-bottom: none;
+					}
+				}
+			}
+			.serviceBox {
+				// 服务选择
+				flex-wrap: wrap;
+				.serviceItem {
+					background-color: #f9f9f9;
+					height: 72rpx;
+					min-width: 190rpx;
+					margin: 20rpx;
+					transition: all 0.3s;
+					&.active {
+						background-color: $pink;
+						transition: all 0.3s;
+						text {
+							transition: all 0.3s;
+							color: #fff;
+						}
+					}
+					text {
+						&.serviceIcon {
+							font-size: 40rpx;
+							margin-right: 20rpx;
+						}
+					}
+				}
+			}
+		}
+	}
+	.PreciseSearch {
+		// 按钮部分
+		background-color: #fff;
+		padding-top: 30rpx;
+		padding-bottom: constant(safe-area-inset-bottom);
+		padding-bottom: env(safe-area-inset-bottom);
+		&.isAndroid{
+			padding-bottom: 50rpx;
+		}
+		.searchBtn {
+			height: 100rpx;
+		}
+	}
+}

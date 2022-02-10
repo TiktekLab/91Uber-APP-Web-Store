@@ -1,0 +1,309 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index", // index
+			"style": {
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/login/uploadAvatar", // 选择头像
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/heart/heart", // 广场
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+
+		}, {
+			"path": "pages/template", // 模板页面
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/news/news", // 消息中心
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+
+			}
+
+		}, {
+			"path": "pages/user/user", // 个人中心
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+
+		}, {
+			"path": "pages/user/mapAddress/mapAddress",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/login/forgetPwd", // 找回密码
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+
+		}, {
+			"path": "pages/user/settingLang/settingLang", // 切换语言
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+
+			}
+
+
+		}, {
+			"path": "pages/news/noticeInfo/noticeInfo", // 系统公告详情
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+
+		}, {
+			"path": "pages/user/videoPlay/videoPlay", // 视频播放
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationBarTextStyle": "white",
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+
+		}, {
+			"path": "pages/user/contactUs/contactUs", // 联系我们
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+
+		}, {
+			"path": "pages/user/editPwd/editPwd", // 修改密码
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+
+		}, {
+			"path": "pages/user/userInfo/userInfo", //  用户信息
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+
+		}, {
+			"path": "pages/user/userOrderList/userOrderList", // 订单列表
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+
+		}, {
+			"path": "pages/heart/workList/workList", // 员工日程表
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+
+		}, {
+			"path": "pages/heart/editStaffOne/editStaffOne", // 员工详情
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+
+		}, {
+			"path": "pages/heart/editStaffTwo/editStaffTwo", // 员工详情
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+
+		}, {
+			"path": "pages/heart/addStaffOne/addStaffOne", // 新增员工
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+
+		}, {
+			"path": "pages/heart/addStaffTwo/addStaffTwo", /// 新增员工
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+
+		}, {
+			"path": "pages/user/orderDetails/orderDetails", // 订单详情
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+
+		}, {
+			"path": "pages/user/evaluate/evaluate", // 评级客户
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+
+			}
+
+		}, {
+			"path": "pages/user/staffDetails/staffDetails",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+
+		}
+	    ,{
+            "path" : "pages/user/recharge/recharge",  // 充值保证金
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/refund/refund",  // 退还保证金
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/user/pay/pay",  // 充值保证金
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"app-plus": {
+					"titleNView": false
+				}
+            }
+            
+        }
+        ,{
+            "path" : "pages/link/link",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"tabBar": {
+		"color": "#363A3D",
+		"selectedColor": "#F1598E",
+		"list": [{
+			"pagePath": "pages/heart/heart",
+			"iconPath": "static/icon/heart.png",
+			"selectedIconPath": "static/icon/heartActive.png",
+			"text": "广场"
+		}, {
+			"pagePath": "pages/news/news",
+			"iconPath": "static/icon/news.png",
+			"selectedIconPath": "static/icon/newsActive.png",
+			"text": "消息中心"
+		}, {
+			"pagePath": "pages/user/user",
+			"iconPath": "static/icon/user.png",
+			"selectedIconPath": "static/icon/userActive.png",
+			"text": "个人中心"
+		}]
+	},
+	"globalStyle": {
+		"pageOrientation": "portrait",
+		"navigationBarTextStyle": "black",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF",
+		"onReachBottomDistance": 50,
+		"app-plus": {
+			"navigationBarTitleText": "",
+			"scrollIndicator": "none",
+			"pageOrientation": "portrait",
+			"bounce": "none"
+			// "softinputNavBar": "none"
+		}
+	},
+	"easycom": {
+		"^u-(.*)": "uview-ui/components/u-$1/u-$1.vue"
+	}
+}
