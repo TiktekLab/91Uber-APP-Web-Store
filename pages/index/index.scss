@@ -1,7 +1,7 @@
 $time: 0.75s;
 .bodyMain {
 	background: url(@/static/image/bg.png) no-repeat center bottom;
-	background-size: 120%;
+	background-size: 115%;
 	height: 100vh;
 	overflow: auto;
 	transition: all 1s;
@@ -23,7 +23,7 @@ $time: 0.75s;
 	.bg {
 		width: 100vw;
 		height: 100vh;
-		background: rgba(62, 64, 63, 0.4);
+		//background: rgba(62, 64, 63, 0.4);
 		z-index: 1;
 	}
 	.main {
@@ -52,12 +52,12 @@ $time: 0.75s;
 			}
 			text {
 				font-size: 128rpx;
-				color: rgba(255, 255, 255, 0.3);
+				color: rgba(153, 47, 101, 0.3);
 				transition: all $time;
 				white-space: nowrap;
 				font-family: PaytoneOne;
 				&.active {
-					color: rgba(255, 255, 255, 1);
+					color: rgba(153, 47, 101, 1);
 					transition: all $time;
 				}
 				&:first-child {
@@ -100,7 +100,7 @@ $time: 0.75s;
 								.inputLable {
 									margin-bottom: 10rpx;
 									.lable {
-										color: #fff;
+										color: $pink;
 										font-size: 30rpx;
 										font-family: PoppinsBold;
 										&.tips {
@@ -114,7 +114,7 @@ $time: 0.75s;
 						
 					}
 					.u-form-item--left__content__label {
-						color: #fff;
+						color: $pink;
 						font-size: 30rpx;
 						font-family: PoppinsBold;
 					}
@@ -131,12 +131,12 @@ $time: 0.75s;
 					padding: 40rpx 0;
 					.checkbox {
 						/deep/ .u-checkbox__label {
-							color: #fff;
+							color: $pink;
 						}
 					}
 					.Forget {
 						font-size: 30rpx;
-						color: #fff;
+						color: $pink;
 						z-index: 100;
 					}
 				}
@@ -150,13 +150,13 @@ $time: 0.75s;
 						height: 30rpx;
 						flex: 0 0 30rpx;
 						margin-right: 15rpx;
-						border: 2rpx solid #fff;
+						border: 2rpx solid $pink;
 						border-radius: 30rpx;
 						padding: 0 0 10rpx 10rpx;
 					}
 					.circleInfo {
 						font-size: 20rpx;
-						color: #fff;
+						color: $pink;
 						&.savePwdLable {
 							font-size: 30rpx;
 						}
@@ -167,7 +167,7 @@ $time: 0.75s;
 				}
 				.policy {
 					/deep/ .u-checkbox__label {
-						color: #fff;
+						color: $pink;
 						font-size: 20rpx;
 					}
 				}
@@ -175,7 +175,7 @@ $time: 0.75s;
 		}
 		.welcome {
 			margin: 30rpx 0 70rpx;
-			color: #fff;
+			color: $pink;
 			font-size: 20rpx;
 			justify-content: center;
 			white-space: nowrap;

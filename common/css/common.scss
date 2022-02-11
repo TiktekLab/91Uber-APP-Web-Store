@@ -20,11 +20,11 @@ $primary: #007aff;
 $success: #90c418;
 $warning: #f0ad4e;
 $error: #dd524d;
-$pink: #ff36a2; // 粉色背景
+$pink: #992F65; // 粉色背景(#ff36a2)
 $violet: #5856d6;
 $gray: #f0f2f5;
 $white: #ffffff;
-$font-color-pink: #ff36a2; // 粉色字体
+$font-color-pink: #992F65; // 粉色字体(#ff36a2)
 $font-color-gray: #686868; // 灰色字体
 // 全局字体
 $font-size-sm: 18rpx; // 固定不改
@@ -182,7 +182,7 @@ textarea {
 		border-radius: 10rpx;
 	}
 	&.white {
-		color: #fff;
+		color: $pink;
 	}
 	&.width{
 		width: 100%;
@@ -193,7 +193,7 @@ textarea {
 	color: grey;
 	padding: 20rpx 5rpx 20rpx 0rpx;	
 	&.white {
-		color: #fff;
+		color: $pink;
 	}
 }
 .eye {
@@ -201,6 +201,6 @@ textarea {
 	color: grey;
 	padding: 10rpx;
 	&.white {
-		color: #fff;
+		color: $pink;
 	}
 }
