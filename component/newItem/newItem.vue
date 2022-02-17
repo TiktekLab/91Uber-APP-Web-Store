@@ -10,7 +10,10 @@
 				<!-- 未读消息添加 strong 样式 -->
 				<text :class="['TwoLines', { strong: !ItemDetails.isRead }]">{{ ItemDetails.content }}</text>
 			</view>
-			<view v-if="ItemDetails.description" class="ExactAddress flex-start">
+			<view v-if="ItemDetails.startTime && ItemDetails.endTime" class="ExactAddress flex-start">
+				<text class="address TwoLines">{{ getOrderTime(ItemDetails) }}</text>
+			</view>
+			<view v-else-if="ItemDetails.description" class="ExactAddress flex-start">
 				<text class="address TwoLines">{{ ItemDetails.description }}</text>
 			</view>
 			<view v-if="showType === 0" class="btnGroup flex-end">
@@ -71,6 +74,7 @@
 </template>
 
 <script>
+import moment from "moment";	
 export default {
 	props: {
 		showType: {
@@ -90,8 +94,10 @@ export default {
 			default: {}
 		}
 	},
-	data() {
-		return {};
+	methods: {
+		getOrderTime(item) {
+			return moment(item.startTime.replace('T', ' ')).format('ddd MMM DD,HH:mm') + "-" + moment(item.endTime.replace('T', ' ')).format('HH:mm');
+		}
 	}
 };
 </script>
