@@ -25,7 +25,8 @@
 						</view>
 						<text class="Forget flex-center" @click="navigateTo">忘记密码?</text>
 					</view>
-					<u-button hover-class="none" @click="login" plain class="login pink m-btn">下一步</u-button>
+					<u-button hover-class="none" plain class="login pink m-btn">下一步</u-button>
+					<!-- <u-button hover-class="none" @click="login" plain class="login pink m-btn">下一步</u-button> -->
 					<view class="footer  flex-start" @click="isLogin = !isLogin">
 						<view class="circle flex-center"><u-icon name="checkmark" size="40" v-if="isLogin" color="#992F65" /></view>
 						<text class="circleInfo law">我已满18周岁，并已满足当地法律法规许可规定</text>
@@ -53,7 +54,8 @@
 						<input class="input white" placeholder-style="color:#992F65" v-model="signUpData.pwd" placeholder="请输入密码" :type="isShowPwd[1].type ? 'text' : 'password'" />
 						<text class="iconfont eye white" @click="switchType(1)">{{ isShowPwd[1].type ? "&#xe68e;" : "&#xe68d;" }}</text>
 						</u-form-item>
-					<u-button hover-class="none" @click="signUp" plain class="signUpBtn pink m-btn">下一步</u-button>
+					<u-button hover-class="none" plain class="signUpBtn pink m-btn">下一步</u-button>
+					<!-- <u-button hover-class="none" @click="signUp" plain class="signUpBtn pink m-btn">下一步</u-button> -->
 					<view class="footer  flex-start">
 						<view class="circle flex-center" @click="agree = !agree"><u-icon name="checkmark" size="40" v-if="agree" color="#992F65" /></view>
 						<view>
