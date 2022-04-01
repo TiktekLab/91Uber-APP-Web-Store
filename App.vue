@@ -16,7 +16,7 @@ export default {
 		this.updateApp();
 		//this.autoLogin();	
 		const res = uni.getSystemInfoSync();
-		let appLink = 'https://img.91uber.co/126/1508686120200306783.apk';
+		let appLink = 'https://img.91uber.co/126/1509830033401315338.apk';
 		if(res.platform === 'ios'){
 			appLink = 'https://testflight.apple.com/join/RHV6E4SC';
 		}
