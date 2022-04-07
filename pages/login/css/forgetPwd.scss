@@ -1,6 +1,6 @@
 .bodyMain {
-	background: url(@/static/image/bg.png) no-repeat center bottom;
-	background-size: 105%;
+	background:#992F65 url(@/static/image/bg.png) no-repeat center center;
+	background-size: cover;
 	// padding: 0 50rpx;
 	overflow: auto;
 	height: 100vh;
@@ -38,7 +38,7 @@
 					margin-top: 20rpx;
 				}
 				&::after {
-					border-bottom: 6rpx solid $pink;
+					border-bottom: 6rpx solid #FFFFFF;
 				}
 				.u-form-item--left__content__label {
 					color: #fff;
@@ -61,7 +61,7 @@
 					}
 				}
 				.u-form-item__message {
-					color: $pink;
+					color: #FFFFFF;
 				}
 			}
 		}

@@ -75,7 +75,7 @@
 					</view>
 					<view class="footerBtn flex-end">
 						<u-button class="m-btn addTimeBtn " hover-class="none" @click="onSelectTime('start')">
-							<u-icon name="plus" color="#ff36a2" size="30" />
+							<u-icon name="plus" color="#992F65" size="30" />
 							<text style="marginLeft: 10rpx">添加时间段</text>
 						</u-button>
 					</view>

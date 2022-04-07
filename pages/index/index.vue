@@ -12,59 +12,57 @@
 			<view class="formBox">
 				<u-form :model="loginData" :error-type="['toast']" ref="loginForm" :class="['form', { isSignUp: swiperCurrent }]" label-position="top">
 					<u-form-item label="电话" prop="username">
-						<text class="prefix white">+61</text><input class="input white" placeholder-style="color:#992F65" v-model="loginData.username" placeholder="请输入电话号码" type="number" />
+						<text class="prefix loginWhite">+61</text><input class="input loginWhite" placeholder-style="color:rgb(192, 196, 204)" v-model="loginData.username" placeholder="输入电话号码" type="number" />
 					</u-form-item>
 					<u-form-item label="密码" prop="password">
-						<input class="input white" placeholder-style="color:#992F65" v-model="loginData.password" placeholder="输入密码" :type="isShowPwd[0].type ? 'text' : 'password'" />
-						<text class="iconfont eye white" @click="switchType(0)">{{ isShowPwd[0].type ? "&#xe68e;" : "&#xe68d;" }}</text>
+						<input class="input loginWhite" placeholder-style="color:rgb(192, 196, 204)" v-model="loginData.password" placeholder="输入密码" :type="isShowPwd[0].type ? 'text' : 'password'" />
+						<text class="iconfont eye loginWhite" @click="switchType(0)">{{ isShowPwd[0].type ? "&#xe68e;" : "&#xe68d;" }}</text>
 					</u-form-item>
 					<view class="savePwd flex-space-between">
 						<view class="footer  flex-center" @click="saveLogin = !saveLogin">
-							<view class="circle flex-center"><u-icon name="checkmark" size="40" v-if="saveLogin" color="#992F65" /></view>
+							<view class="circle flex-center"><u-icon name="checkmark" size="40" v-if="saveLogin" color="#FFFFFF" /></view>
 							<text class="circleInfo savePwdLable">记住密码</text>
 						</view>
 						<text class="Forget flex-center" @click="navigateTo">忘记密码?</text>
 					</view>
-					<u-button hover-class="none" plain class="login pink m-btn">下一步</u-button>
-					<!-- <u-button hover-class="none" @click="login" plain class="login pink m-btn">下一步</u-button> -->
+					<u-button hover-class="none" @click="login" plain class="login pink m-btn">下一步</u-button>
 					<view class="footer  flex-start" @click="isLogin = !isLogin">
-						<view class="circle flex-center"><u-icon name="checkmark" size="40" v-if="isLogin" color="#992F65" /></view>
+						<view class="circle flex-center"><u-icon name="checkmark" size="40" v-if="isLogin" color="#FFFFFF" /></view>
 						<text class="circleInfo law">我已满18周岁，并已满足当地法律法规许可规定</text>
 					</view>
 					<text class="welcome flex">Welcome to 91Uber for Business</text>
 				</u-form>
 
 				<u-form :model="signUpData" :error-type="['toast']" ref="signUpForm" :class="['form', { isSignUp: !swiperCurrent }]" label-position="top">
-					<u-form-item label="昵称" prop="name"><input class="input white" placeholder-style="color:#992F65" v-model="signUpData.name" placeholder="请输入昵称" type="text" /></u-form-item>
+					<u-form-item label="昵称" prop="name"><input class="input loginWhite" placeholder-style="color:rgb(192, 196, 204)" v-model="signUpData.name" placeholder="请输入昵称" type="text" /></u-form-item>
 					<u-form-item label="手机号" prop="phone">
-						<text class="prefix white">+61</text><input class="input white" placeholder-style="color:#992F65" v-model="signUpData.phone" placeholder="请输入手机号" type="number" />						
+						<text class="prefix loginWhite">+61</text><input class="input loginWhite" placeholder-style="color:rgb(192, 196, 204)" v-model="signUpData.phone" placeholder="请输入手机号" type="number" />						
 					</u-form-item>
 					<u-form-item label="验证码" prop="code">
-						<input class="input white" placeholder-style="color:#992F65" v-model="signUpData.code" placeholder="请输入验证码" type="number" />
-						<u-button slot="right" hover-class="none" class="getCode pink m-btn" size="mini" @click="getCode">{{ codeTips }}</u-button>
+						<input class="input loginWhite" placeholder-style="color:rgb(192, 196, 204)" v-model="signUpData.code" placeholder="请输入验证码" type="number" />
+						<u-button slot="right" hover-class="none" class="getCode login m-btn" size="mini" @click="getCode">{{ codeTips }}</u-button>
 					</u-form-item>
 					<u-form-item prop="email" class="email">
 						<view class="inputLable flex-start">
 							<text class="lable flex">邮箱</text>
 							<text class="lable flex tips">(注册真实邮箱可收到最新行业数据)</text>
 						</view>
-						<input class="input white width" placeholder-style="color:#992F65" v-model="signUpData.email" placeholder="请重新输入邮箱" />
+						<input class="input loginWhite width" placeholder-style="color:rgb(192, 196, 204)" v-model="signUpData.email" placeholder="请重新输入邮箱" />
 					</u-form-item>
 					<u-form-item label="密码" prop="pwd">
-						<input class="input white" placeholder-style="color:#992F65" v-model="signUpData.pwd" placeholder="请输入密码" :type="isShowPwd[1].type ? 'text' : 'password'" />
-						<text class="iconfont eye white" @click="switchType(1)">{{ isShowPwd[1].type ? "&#xe68e;" : "&#xe68d;" }}</text>
+						<input class="input loginWhite" placeholder-style="color:rgb(192, 196, 204)" v-model="signUpData.pwd" placeholder="请输入密码" :type="isShowPwd[1].type ? 'text' : 'password'" />
+						<text class="iconfont eye loginWhite" @click="switchType(1)">{{ isShowPwd[1].type ? "&#xe68e;" : "&#xe68d;" }}</text>
 						</u-form-item>
-					<u-button hover-class="none" plain class="signUpBtn pink m-btn">下一步</u-button>
-					<!-- <u-button hover-class="none" @click="signUp" plain class="signUpBtn pink m-btn">下一步</u-button> -->
+					<u-button hover-class="none" @click="signUp" plain class="signUpBtn login m-btn">下一步</u-button>
 					<view class="footer  flex-start">
-						<view class="circle flex-center" @click="agree = !agree"><u-icon name="checkmark" size="40" v-if="agree" color="#992F65" /></view>
+						<view class="circle flex-center" @click="agree = !agree"><u-icon name="checkmark" size="40" v-if="agree" color="#FFFFFF" /></view>
 						<view>
 							<text class="circleInfo" @click="agree = !agree">点击注册按钮即表示您已同意我们的</text>
 							<text class="circleInfo" :href="href" @click="openURL">《91UBER 隐私政策》</text>
 						</view>
 					</view>
 					<view class="footer  flex-start" @click="isSignUp = !isSignUp">
-						<view class="circle flex-center"><u-icon name="checkmark" size="40" v-if="isSignUp" color="#992F65" /></view>
+						<view class="circle flex-center"><u-icon name="checkmark" size="40" v-if="isSignUp" color="#FFFFFF" /></view>
 						<text class="circleInfo law">我已满18周岁，并已满足当地法律法规许可规定</text>
 					</view>
 					<text class="welcome flex">Welcome to 91Uber for Business</text>

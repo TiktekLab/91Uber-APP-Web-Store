@@ -12,26 +12,9 @@ export default {
 			plus.navigator.closeSplashscreen();
 		}, 2000);
 		uni.hideTabBar();
-		//launchCall();
+		launchCall();
 		this.updateApp();
-		//this.autoLogin();	
-		const res = uni.getSystemInfoSync();
-		let appLink = 'https://img.91uber.co/126/1509830033401315338.apk';
-		if(res.platform === 'ios'){
-			appLink = 'https://testflight.apple.com/join/RHV6E4SC';
-		}
-		uni.showModal({
-			title: '温馨提示',
-			content: '有新版本可以更新，赶快体验最新版本吧！',
-			showCancel: false,
-			confirmText: '立即升级',
-			confirmColor: '#992F65',
-			success: function (res) {
-				if (res.confirm) {
-					plus.runtime.openURL(appLink);
-				} 
-			}
-		});
+		this.autoLogin();	
 	},
 	data() {
 		return {

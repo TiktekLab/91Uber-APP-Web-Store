@@ -14,35 +14,35 @@
 			<view class="registerForm">
 				<u-form :model="formData" :error-type="['toast']" ref="regForm" class="form" label-position="top">
 					<u-form-item label="电话" prop="phone">
-						<text class="prefix white">+61</text><input class="input white" placeholder-style="color:rgb(192, 196, 204)" v-model="formData.phone" placeholder="请输入手机号" type="number" />
+						<text class="prefix loginWhite">+61</text><input class="input loginWhite" placeholder-style="color:rgb(192, 196, 204)" v-model="formData.phone" placeholder="请输入手机号" type="number" />
 					</u-form-item>
 					<u-form-item label="验证码" prop="code">
-						<input class="input white" placeholder-style="color:rgb(192, 196, 204)" v-model="formData.code" placeholder="请输入验证码" type="number" />
-						<u-button slot="right" hover-class="none" class="getCode pink m-btn" size="mini" @click="getCode">{{ codeTips }}</u-button>
+						<input class="input loginWhite" placeholder-style="color:rgb(192, 196, 204)" v-model="formData.code" placeholder="请输入验证码" type="number" />
+						<u-button slot="right" hover-class="none" class="getCode login m-btn" size="mini" @click="getCode">{{ codeTips }}</u-button>
 					</u-form-item>
 					<u-form-item label="密码" prop="pwd">
 						<input
-							class="input white"
+							class="input loginWhite"
 							placeholder-style="color:rgb(192, 196, 204)"
 							v-model="formData.pwd"
 							placeholder="请输入密码"
 							:type="isShowPwd[0].type ? 'text' : 'password'"
 						/>
-						<text class="iconfont eye white" @click="switchType(0)">{{ isShowPwd[0].type ? "&#xe68e;" : "&#xe68d;" }}</text>
+						<text class="iconfont eye loginWhite" @click="switchType(0)">{{ isShowPwd[0].type ? "&#xe68e;" : "&#xe68d;" }}</text>
 					</u-form-item>
 					<u-form-item label="确认密码" prop="confirmPwd">
 						<input
-							class="input white"
+							class="input loginWhite"
 							placeholder-style="color:rgb(192, 196, 204)"
 							v-model="formData.confirmPwd"
 							placeholder="请重新输入密码"
 							:type="isShowPwd[1].type ? 'text' : 'password'"
 						/>
-						<text class="iconfont eye white" @click="switchType(1)">{{ isShowPwd[1].type ? "&#xe68e;" : "&#xe68d;" }}</text>
+						<text class="iconfont eye loginWhite" @click="switchType(1)">{{ isShowPwd[1].type ? "&#xe68e;" : "&#xe68d;" }}</text>
 					</u-form-item>
 				</u-form>
 				<view :class="['PreciseSearch', { isAndroid: isAndroid }]">
-					<u-button hover-class="none" @click="submit" plain class="submit pink m-btn">确认并保存</u-button>
+					<u-button hover-class="none" @click="submit" plain class="submit login m-btn">确认并保存</u-button>
 					<text class="flex-center welcome">Welcome to 91Uber for Business</text>
 				</view>
 			</view>

@@ -2,13 +2,13 @@
 	<view class="bodyMain bodyBG">
 		<u-navbar title="我的订单" />
 		<view class=" subSection">
-			<u-subsection :list="orderStatus" @change="sectionChange" active-color="#ff36a2" :current="tabCurrent"
+			<u-subsection :list="orderStatus" @change="sectionChange" active-color="#992F65" :current="tabCurrent"
 				font-size="26rpx" bg-color="rgba(0,0,0,.1)" />
 			<view class="search flex-start" @click="searchEvent">
 				<view class=" searchIconBox flex-center">
 					<text class="iconfont searchIcon">&#xe60a;</text>
 				</view>
-				<input v-model="searchData" class="input " @confirm="searchEvent" placeholder="搜索女生名称或订单号" />
+				<input v-model="searchData" class="input " @confirm="searchEvent" placeholder="搜索员工名称或订单号" />
 			</view>
 		</view>
 		<view class="orderList">

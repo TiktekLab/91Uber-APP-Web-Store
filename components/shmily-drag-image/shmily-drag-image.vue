@@ -27,7 +27,7 @@
 							@mouseup.stop="nothing()"
 						>
 							<view class="del-wrap">
-								<!-- <u-icon name="close" color="#ff36a2" /> -->
+								<!-- <u-icon name="close" color="#992F65" /> -->
 								<text class="iconfont del">&#xe605;</text>
 							</view>
 						</view>
@@ -35,7 +35,7 @@
 				</movable-view>
 			</block>
 			<view class="add" v-if="imageList.length < number" :style="{ top: add.y, left: add.x, width: viewWidth + 'px', height: viewWidth + 'px' }" @click="addImages">
-				<view class="add-wrap m-radius" :style="{ width: childWidth, height: childWidth }"><u-icon name="plus" color="#ff36a2" size="40" /></view>
+				<view class="add-wrap m-radius" :style="{ width: childWidth, height: childWidth }"><u-icon name="plus" color="#992F65" size="40" /></view>
 			</view>
 		</movable-area>
 	</view>

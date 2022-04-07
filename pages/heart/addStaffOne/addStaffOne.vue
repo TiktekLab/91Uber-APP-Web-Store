@@ -374,7 +374,7 @@ export default {
 				if (time < 60) {
 					return time + "分钟";
 				} else if (time === 600) {
-					return moment.utc(moment.duration(time, "minutes").asMilliseconds()).format("h") + "小时(包夜)";
+					return moment.utc(moment.duration(time, "minutes").asMilliseconds()).format("h") + "小时";
 				} else {
 					return moment.utc(moment.duration(time, "minutes").asMilliseconds()).format("h") + "小时";
 				}

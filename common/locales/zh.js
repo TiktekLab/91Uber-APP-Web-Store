@@ -64,7 +64,7 @@ export default {
 	heart: { // 广场
 		switchSJ: '切换商家端榜单',
 		switchKH: '切换客户端榜单',
-		goodTextSJ: '优质女生榜',
+		goodTextSJ: '优质员工榜',
 		goodTextKH: '优质富豪榜',
 		BadTextSJ: '远离照骗榜',
 		BadTextKH: '远离渣男榜',

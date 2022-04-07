@@ -47,7 +47,7 @@
 			<view class="addStaff flex-center" @click="navigateTo('./addStaffOne/addStaffOne', false)">
 				<u-image :src="avatarUrl(50)" width="88" height="88" shape="circle" mode="aspectFill" />
 				<view class="flex-center plus">
-					<u-icon name="plus" color="#ff36a2" />
+					<u-icon name="plus" color="#992F65" />
 					<text class="text flex-center">添加新员工</text>
 				</view>
 			</view>

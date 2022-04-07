@@ -99,7 +99,7 @@ export default {
 		// "确定"按钮的颜色
 		confirmColor: {
 			type: String,
-			default: '#ff36a2'
+			default: '#992F65'
 		},
 		// 默认显示的时间，2025-07-02 || 2025-07-02 13:01:00 || 2025/07/02
 		defaultTime: {

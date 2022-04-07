@@ -5,7 +5,7 @@
 				<!-- <text v-if="index === 1 && isNews" class="iconfont spot">&#xe726;</text> -->
 				<text v-if="index === 1 && totalUnreadCount && active === index" class="iconfont spot">&#xe726;</text>
 				<!-- 选中时、有消息显示小原点-->
-				<!-- <u-badge v-if="index === 1 && totalUnreadCount && active !== index" count="54" bgColor="#ff36a2"  :offset="[-5, -20]" /> -->
+				<!-- <u-badge v-if="index === 1 && totalUnreadCount && active !== index" count="54" bgColor="#992F65"  :offset="[-5, -20]" /> -->
 				<text v-if="index === 1 && totalUnreadCount && active !== index" class="badge flex-center">{{ totalUnreadCount > 99 ? '99+' : totalUnreadCount }}</text>
 				<!-- 没选中时、有消息显示消息条数-->
 				<image v-if="active === index" class="m-icon" :src="item.selectIcon" mode="aspectFill" />

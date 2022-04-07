@@ -38,14 +38,17 @@
 /* #ifndef APP-NVUE */
 .m-btn {
 	border: none;
-	border-radius: 46rpx;
+	border-radius: 36rpx;
 	font-size: $font-size-lg;
 	font-family: PingFangSCMedium;
 	&.pink {
 		background: $pink;
 		color: #fff;
 	}
-
+	&.login {
+		background: #FFFFFF;
+		color: #992F65;		
+	}
 	&::after {
 		display: none !important;
 	}

@@ -145,7 +145,7 @@
 			<u-form-item :border-bottom="false">
 				<view class="formItem padding">
 					<view class="inputLable flex-start">
-						<text class="lable flex">选择女生所属的类型</text>
+						<text class="lable flex">选择员工所属的类型</text>
 						<text class="lable flex tips">(不可多选)</text>
 					</view>
 					<view class="serviceBox flex">
@@ -418,7 +418,7 @@ export default {
 				if (time < 60) {
 					return time + "分钟";
 				} else if (time === 600) {
-					return moment.utc(moment.duration(time, "minutes").asMilliseconds()).format("h") + "小时(包夜)";
+					return moment.utc(moment.duration(time, "minutes").asMilliseconds()).format("h") + "小时";
 				} else {
 					return moment.utc(moment.duration(time, "minutes").asMilliseconds()).format("h") + "小时";
 				}
