@@ -15,7 +15,7 @@
 						<text class="prefix loginWhite">+61</text><input class="input loginWhite" placeholder-style="color:rgb(192, 196, 204)" v-model="loginData.username" placeholder="输入电话号码" type="number" />
 					</u-form-item>
 					<u-form-item label="密码" prop="password">
-						<input class="input loginWhite" placeholder-style="color:rgb(192, 196, 204)" v-model="loginData.password" placeholder="输入密码" :type="isShowPwd[0].type ? 'text' : 'password'" />
+						<input class="uni-input-input input loginWhite" placeholder-style="color:rgb(192, 196, 204)" v-model="loginData.password" placeholder="输入密码" :type="isShowPwd[0].type ? 'text' : 'password'" />
 						<text class="iconfont eye loginWhite" @click="switchType(0)">{{ isShowPwd[0].type ? "&#xe68e;" : "&#xe68d;" }}</text>
 					</u-form-item>
 					<view class="savePwd flex-space-between">
@@ -50,7 +50,7 @@
 						<input class="input loginWhite width" placeholder-style="color:rgb(192, 196, 204)" v-model="signUpData.email" placeholder="请重新输入邮箱" />
 					</u-form-item>
 					<u-form-item label="密码" prop="pwd">
-						<input class="input loginWhite" placeholder-style="color:rgb(192, 196, 204)" v-model="signUpData.pwd" placeholder="请输入密码" :type="isShowPwd[1].type ? 'text' : 'password'" />
+						<input class="uni-input-input input loginWhite" placeholder-style="color:rgb(192, 196, 204)" v-model="signUpData.pwd" placeholder="请输入密码" :type="isShowPwd[1].type ? 'text' : 'password'" />
 						<text class="iconfont eye loginWhite" @click="switchType(1)">{{ isShowPwd[1].type ? "&#xe68e;" : "&#xe68d;" }}</text>
 						</u-form-item>
 					<u-button hover-class="none" @click="signUp" plain class="signUpBtn login m-btn">下一步</u-button>

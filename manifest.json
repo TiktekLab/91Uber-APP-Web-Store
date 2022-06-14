@@ -1,6 +1,6 @@
 {
     "name" : "91优步澳洲商家",
-    "appid" : "__UNI__A11A78E",
+    "appid" : "__UNI__CBEBDDD",
     "description" : "91优步- 赚钱&商家版",
     "versionName" : "1.2.3",
     "versionCode" : 123,
@@ -155,7 +155,12 @@
     },
     "h5" : {
         "router" : {
-            "mode" : "history"
-        }
+            "mode" : "hash",
+            "base" : "./"
+        },
+        "devServer" : {
+            "https" : true
+        },
+        "title" : "91Uber商家"
     }
 }
