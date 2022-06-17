@@ -181,7 +181,8 @@
 							filePath: e.tempFilePaths[0],
 							name: "file",
 							formData: {
-								folderPath: "danners"
+								folderPath: "danners",
+								fileType: 1
 							},
 							loading: true,
 							success: res => {

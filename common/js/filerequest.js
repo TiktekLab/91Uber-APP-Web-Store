@@ -20,9 +20,10 @@ export function uploadFile(options = {}) {
 	uni.uploadFile({
 		url: base.baseUrl + options.url,
 		filePath: options.filePath,
+		file: options.file,
 		name: options.name,
 		header: {
-			'content-type': 'multipart/form-data',
+			'Content-Type': 'multipart/form-data',
 			'Authorization': 'Bearer ' + getToken()
 		},
 		formData: options.formData,

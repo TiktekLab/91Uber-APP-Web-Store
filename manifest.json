@@ -159,7 +159,7 @@
             "base" : "./"
         },
         "devServer" : {
-            "https" : true
+            "https" : false
         },
         "title" : "91Uber商家"
     }

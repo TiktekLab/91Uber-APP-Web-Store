@@ -188,7 +188,8 @@ export default {
 		this.getData();
 		const that = this;
 		//重点: 监听子页面uni.postMessage返回的值
-		plus.globalEvent.addEventListener("plusMessage", function(msg) {
+		uni.$on("plusMessage", function(msg) {
+			console.log(11);
 			if (msg.data.args.data.name == "postMessage") {
 				console.log("子页面返回的数据为:" + JSON.stringify(msg.data.args.data.arg));
 				const { option, street, city, province, region, postcode, location } = msg.data.args.data.arg;
@@ -315,12 +316,9 @@ export default {
 				success: e => {
 					this.addStaffData.avatar = e.tempFilePaths[0];
 					uploadFile({
-						url: this.$api.imgUpload,
+						url: this.$api.imgUpload+"?folderPath=danners&fileType=1",
 						filePath: e.tempFilePaths[0],
 						name: "file",
-						formData: {
-							folderPath: "danners"
-						},
 						loading: true,
 						success: res => {
 							that.addStaffData.avatar = "https://" + res.result;

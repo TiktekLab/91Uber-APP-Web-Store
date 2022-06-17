@@ -4,7 +4,7 @@ const api = {
 	sendCode: '/api-dancers/store/sendCode', //发送验证码
 	register: '/api-dancers/store/register', //店铺注册 
 	loginOut: '/api-uaa/oauth/remove/token', //退出登录
-	imgUpload: '/api-file/oss/imgUpload', //图片文件上传
+	imgUpload: '/api-file/oss/upload', //图片文件上传
 	imgUploads: '/api-file/oss/imgUploads', //多图片文件上传
 	videoUpload: '/api-file/oss/videoUpload', //视频文件上传
 	updateStoreInfo: '/api-labour/store/store', //修改店铺信息
