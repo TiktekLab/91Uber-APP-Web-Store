@@ -11,7 +11,7 @@
 				<text class="dragInfo">长按图片可拖动调整顺序</text>
 			</view>
 		</view>
-		<viwe class="border flex-center"></viwe>
+		<view class="border flex-center"></view>
 		<view class="formItem ">
 			<view class="inputLable flex-start"><text class="lable flex">添加视频</text></view>
 			<view class="videoBox">
@@ -21,7 +21,7 @@
 				</view>
 			</view>
 		</view>
-		<viwe class="border flex-center"></viwe>
+		<view class="border flex-center"></view>
 		<view class="formItem ">
 			<view class="inputLable flex-start"><text class="lable flex">身材类型*</text></view>
 			<view class="lableBox flex">
@@ -31,7 +31,7 @@
 				</view>
 			</view>
 		</view>
-		<viwe class="border flex-center"></viwe>
+		<view class="border flex-center"></view>
 		<view class="formItem ">
 			<view class="inputLable flex-start">
 				<text class="lable flex">兴趣爱好</text>
@@ -44,7 +44,7 @@
 				</view>
 			</view>
 		</view>
-		<viwe class="border flex-center"></viwe>
+		<view class="border flex-center"></view>
 		<view class="formItem ">
 			<view class="inputLable flex-start">
 				<text class="lable flex">标签</text>
@@ -188,6 +188,7 @@
 							uri: value
 						});
 					});
+          console.log(imgs)
 					uploadFiles({
 						url: that.$api.imgUploads,
 						files: imgs,
@@ -204,6 +205,7 @@
 						that.addStaffData.images = images;
 						resolve();
 					}).catch(err => {
+            console.log(err)
 						uni.showToast({
 							title: "照片上传失败",
 							icon: "none",
@@ -217,7 +219,7 @@
 			},
 			async saveStaff() {
 				// 保存员工
-				if (!this.picTureList.length) {
+				if (this.picTureList.length < 1) {
 					return this.$u.toast("至少添加一张照片");
 				}
 				if (!this.figuresIndex && this.figuresIndex !== 0) return this.$u.toast("请选择身材类型");
@@ -229,8 +231,9 @@
 					this.addStaffData.serveIds.push(it.id);
 				});
 				const labelActive = this.labelList.filter(t => t.active);
-				if (!labelActive.length) return this.$u.toast("请选择标签");				
+				if (!labelActive.length) return this.$u.toast("请选择标签");
 				await this.UploadPicTrue();
+        console.log(this.addStaffData.images)
 				if (!this.addStaffData.images.length) {
 					return this.$u.toast("至少添加一张照片");
 				}

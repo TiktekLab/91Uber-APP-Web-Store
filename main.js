@@ -42,7 +42,14 @@ Vue.mixin({
 import zh from '@/common/locales/zh.js';
 import en from '@/common/locales/en.js';
 import VueI18n from 'vue-i18n'
+// import * as VueGoogleMaps from 'vue-google-autocomplete';
 Vue.use(VueI18n)
+// Vue.use(VueGoogleMaps, {
+//   load: {
+//     key: 'AIzaSyCBSqawIlmE8li02WnoR-XY1gkNjFRkWB4', // 此处填入谷歌地图申请的key
+//     libraries: 'places'
+//   }
+// })
 // uni.clearStorageSync();  // 清楚本地缓存
 var language = undefined;
 if (uni.getStorageSync('language')) {

@@ -131,7 +131,7 @@
 						lng: place.geometry.location.lng()
 					};
 				}
-				uni.postMessage({
+				window.postMessage(JSON.stringify({
 					data: {
 						option: fromsource,
 						street: address1 + ' ' +postcode ,
@@ -141,9 +141,12 @@
 						postcode,
 						location
 					}
-				});
+				}));
 				uni.navigateBack();
 			}
+			window.addEventListener('message', (msg) => {
+				window.parent.postMessage(msg.data)
+			}, false);
 		</script>
 	</body>
 </html>

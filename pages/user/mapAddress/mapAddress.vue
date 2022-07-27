@@ -1,7 +1,5 @@
 <template>
-	<view>
-		<web-view :src="src"></web-view>
-	</view>
+  <web-view :src="src"></web-view>
 </template>
 <script>
 	let wvAddress;
@@ -32,9 +30,8 @@
 			}
 		},
 		methods: {
-
 		}
 	}
 </script>
-<style lang="scss">
+<style>
 </style>

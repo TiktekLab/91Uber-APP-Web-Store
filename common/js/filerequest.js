@@ -23,7 +23,7 @@ export function uploadFile(options = {}) {
 		file: options.file,
 		name: options.name,
 		header: {
-			'Content-Type': 'multipart/form-data',
+			// 'Content-Type': 'multipart/form-data',
 			'Authorization': 'Bearer ' + getToken()
 		},
 		formData: options.formData,
@@ -60,6 +60,44 @@ export function uploadFile(options = {}) {
 		}
 	})
 }
+function urlToBase64(url) {
+	return new Promise ((resolve,reject) => {
+		let image = new Image();
+		image.onload = function() {
+			let canvas = document.createElement('canvas');
+			canvas.width = this.naturalWidth;
+			canvas.height = this.naturalHeight;
+			// 将图片插入画布并开始绘制
+			canvas.getContext('2d').drawImage(image, 0, 0);
+			// result
+			let result = canvas.toDataURL('image/png')
+			resolve(result);
+		};
+		// CORS 策略，会存在跨域问题https://stackoverflow.com/questions/20424279/canvas-todataurl-securityerror
+		image.setAttribute("crossOrigin",'Anonymous');
+		image.src = url;
+		// 图片加载失败的错误处理
+		image.onerror = () => {
+			reject(new Error('urlToBase64 error'));
+		};
+	}
+	)
+}
+
+function base64ToBlob(base64Data) {
+	let arr = base64Data.split(','),
+		fileType = arr[0].match(/:(.*?);/)[1],
+		bstr = atob(arr[1]),
+		l = bstr.length,
+		u8Arr = new Uint8Array(l);
+
+	while (l--) {
+		u8Arr[l] = bstr.charCodeAt(l);
+	}
+	return new Blob([u8Arr], {
+		type: fileType
+	});
+}
 
 // 多文件上传
 export function uploadFiles(options = {}) {
@@ -73,7 +111,7 @@ export function uploadFiles(options = {}) {
 			url: base.baseUrl + options.url,
 			files: options.files,
 			header: {
-				'content-type': 'multipart/form-data',
+				// 'content-type': 'multipart/form-data',
 				'Authorization': 'Bearer ' + getToken()
 			},
 			formData: options.formData,

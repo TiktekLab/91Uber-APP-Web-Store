@@ -225,7 +225,7 @@
 		}
 	    ,{
             "path" : "pages/user/recharge/recharge",  // 充值保证金
-            "style" :                                                                                    
+            "style" :
             {
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false,
@@ -233,11 +233,11 @@
 					"titleNView": false
 				}
             }
-            
+
         }
         ,{
             "path" : "pages/user/refund/refund",  // 退还保证金
-            "style" :                                                                                    
+            "style" :
             {
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false,
@@ -245,11 +245,11 @@
 					"titleNView": false
 				}
             }
-            
+
         }
         ,{
             "path" : "pages/user/pay/pay",  // 充值保证金
-            "style" :                                                                                    
+            "style" :
             {
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false,
@@ -257,16 +257,16 @@
 					"titleNView": false
 				}
             }
-            
+
         }
         ,{
             "path" : "pages/link/link",
-            "style" :                                                                                    
+            "style" :
             {
                 "navigationBarTitleText": "",
                 "enablePullDownRefresh": false
             }
-            
+
         }
     ],
 	"tabBar": {

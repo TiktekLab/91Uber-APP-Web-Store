@@ -161,6 +161,7 @@
         "devServer" : {
             "https" : false
         },
-        "title" : "91Uber商家"
+        "title" : "91Uber商家",
+        "template" : "index.html"
     }
 }

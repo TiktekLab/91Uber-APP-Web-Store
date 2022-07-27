@@ -1,14 +1,13 @@
 //开发环境
-const baseUrl = "http://47.74.89.168:8081";
-// const baseUrl = "http://47.74.87.19:8081";
-const socketUrl = "ws://172.29.92.27:3000";
+// const baseUrl = "http://47.74.89.168:8081";
+// const socketUrl = "ws://47.74.89.232:3000";
 
 //正式环境
-//const baseUrl = "https://api.91uber.co";
-//const socketUrl = "wss://socket.91uber.co";
+const baseUrl = "https://api.91uber.co";
+const socketUrl = "wss://socket.91uber.co";
 
 const courtConfig = {
-	baseUrl: baseUrl, //请求接口	
+	baseUrl: baseUrl, //请求接口
 	webSocketUrl: socketUrl, //webSocket
 	grantType: 'store_phone_client', //登录grant_type
 	authorization: 'Basic RGFuY2VyczpEYW5jZXJzQWRtaW4=', //(Review，develop)登录Authorization
