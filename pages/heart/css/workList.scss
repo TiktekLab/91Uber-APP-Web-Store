@@ -131,9 +131,9 @@
 }
 // 添加时间面板
 .addTimePopup {
-	height: calc(100vh - (constant(safe-area-inset-top) + 44px));
-	height: calc(100vh - (env(safe-area-inset-top) + 44px));
-	height: calc(100vh - (var(--status-bar-height) + 44px));
+	height: calc(100vh - (constant(safe-area-inset-top) + 144px));
+	height: calc(100vh - (env(safe-area-inset-top) + 144px));
+	height: calc(100vh - (var(--status-bar-height) + 144px));
 	background-color: #fff;
 	.popupTitle {
 		height: 120rpx;
@@ -152,7 +152,7 @@
 			&.cancel {
 				color: #6b7582;
 			}
-			
+
 		}
 	}
 	.popupBody {
@@ -177,8 +177,8 @@
 				height: 130rpx;
 				flex: 1;
 			}
-		
+
 		}
-		
+
 	}
 }

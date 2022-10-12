@@ -184,23 +184,46 @@ import { uploadFile } from "@/common/js/filerequest.js";
 const rules = require("@/common/js/addStaffRules.js"); // 表单校验
 export default {
 	onReady() {
-		this.$refs.AddStaff.setRules(this.rules);		
+		this.$refs.AddStaff.setRules(this.rules);
 		const that = this;
 		//重点: 监听子页面uni.postMessage返回的值
-		plus.globalEvent.addEventListener("plusMessage", function(msg) {
-			if (msg.data.args.data.name == "postMessage") {
-				console.log("子页面返回的数据为:" + JSON.stringify(msg.data.args.data.arg));
-				const { option, street, city, province, region, postcode, location } = msg.data.args.data.arg;
-				if (option === "add") {
-					that.addStaffData.street = street;
-					that.addStaffData.city = city;
-					that.addStaffData.province = province;
-					that.addStaffData.region = region;
-					that.addStaffData.longitude = location.lng;
-					that.addStaffData.latitude = location.lat;
-				}
-			}
-		});
+		// window.addEventListener('message', (msg) => {
+		// 	if (msg.data.args.data.name == "postMessage") {
+		// 		console.log("子页面返回的数据为:" + JSON.stringify(msg.data.args.data.arg));
+		// 		const { option, street, city, province, region, postcode, location } = msg.data.args.data.arg;
+		// 		if (option === "add") {
+		// 			that.addStaffData.street = street;
+		// 			that.addStaffData.city = city;
+		// 			that.addStaffData.province = province;
+		// 			that.addStaffData.region = region;
+		// 			that.addStaffData.longitude = location.lng;
+		// 			that.addStaffData.latitude = location.lat;
+		// 		}
+		// 	}
+		// });
+    window.addEventListener('message', (msg) => {
+      try{
+        JSON.parse(msg.data)
+      }catch (e){
+        return;
+      }
+      if (typeof JSON.parse(msg.data) != "object"){
+        return;
+      }
+      if (!JSON.parse(msg.data).data.option){
+        return;
+      }
+      console.log("子页面传来的数据："+msg.data)
+      const {option, street, city, province, region, postcode, location} = JSON.parse(msg.data).data;
+      if (option === "add") {
+        			that.addStaffData.street = street;
+        			that.addStaffData.city = city;
+        			that.addStaffData.province = province;
+        			that.addStaffData.region = region;
+        			that.addStaffData.longitude = location.lng;
+        			that.addStaffData.latitude = location.lat;
+      }
+    }, false);
 	},
 	async onLoad(option) {
 		await this.getData();
@@ -387,11 +410,11 @@ export default {
 					if (!this.classIndex && this.classIndex !== 0) return this.$u.toast("请选所属服务类型");
 					if (!this.addStaffData.avatar) return this.$u.toast("请选择头像");
 					this.addStaffData.bustId = this.addStaffData.gender === 2 ? Number(this.bustList[bustIndex].id) : null;
-					this.addStaffData.classificationIds = [this.classificationList[this.classIndex].id];	
+					this.addStaffData.classificationIds = [this.classificationList[this.classIndex].id];
 					//console.log("价格", this.prices);
 					if (this.prices.every(item => !item.price)) {
-						return this.$u.toast("在堂食价格和outcall中，请至少填写一个时间段的收费标准");						
-					}					
+						return this.$u.toast("在堂食价格和outcall中，请至少填写一个时间段的收费标准");
+					}
 				    if (this.prices.some(item => item.price && item.price < 10)) {
 						return this.$u.toast("在堂食价格和outcall中，请至少填写一个时间段的收费标准，且收费金额需大于10");
 				    }
